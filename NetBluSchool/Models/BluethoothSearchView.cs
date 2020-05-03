@@ -7,6 +7,7 @@ namespace NetBluSchool.Models
 {
     public class BluethoothSearchView
     {
+        public int LessonId { get; set; }
         public List<BluethoothDevice> BluList { get; set; }
     }
 }

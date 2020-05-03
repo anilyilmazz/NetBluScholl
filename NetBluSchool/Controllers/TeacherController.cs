@@ -7,10 +7,13 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace NetBluSchool.Controllers
 {
     public class TeacherController : Controller
     {
+
+        public static List<BluethoothDevice> globalBluList = new List<BluethoothDevice>();
         private readonly ApplicationDbContext _ctx = new ApplicationDbContext();
 
         public TeacherController()
@@ -82,9 +85,11 @@ namespace NetBluSchool.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult SearchStudent()
+        public ActionResult SearchStudent(int id)
         {
+            globalBluList.Clear();
             BluethoothSearchView newDeviceObj = new BluethoothSearchView();
+            newDeviceObj.LessonId = id;
             newDeviceObj.BluList = new List<BluethoothDevice>();
             BluetoothClient client = new BluetoothClient();
             BluetoothDeviceInfo[] devices = client.DiscoverDevicesInRange();
@@ -94,8 +99,15 @@ namespace NetBluSchool.Controllers
                 newDevice.Id = d.i + 1;
                 newDevice.Name = d.value.DeviceName;
                 newDeviceObj.BluList.Add(newDevice);
+                globalBluList.Add(newDevice);
             }
             return View(newDeviceObj);
+        }
+        [HttpPost]
+        public ActionResult SaveStudents(int lessonId)
+        {
+            var a = globalBluList;
+            return Json(1);
         }
     }
 }
