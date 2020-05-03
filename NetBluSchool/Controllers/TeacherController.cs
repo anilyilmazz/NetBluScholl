@@ -88,18 +88,14 @@ namespace NetBluSchool.Controllers
             newDeviceObj.BluList = new List<BluethoothDevice>();
             BluetoothClient client = new BluetoothClient();
             BluetoothDeviceInfo[] devices = client.DiscoverDevicesInRange();
-            int i = 1;
-            foreach (BluetoothDeviceInfo d in devices)
+            foreach (var d in devices.Select((value, i) => new { i, value }))
             {
                 BluethoothDevice newDevice = new BluethoothDevice();
-                newDevice.Id = i;
-                newDevice.Name = d.DeviceName;
+                newDevice.Id = d.i + 1;
+                newDevice.Name = d.value.DeviceName;
                 newDeviceObj.BluList.Add(newDevice);
-                i += 1;
             }
-            ViewData["items"] = newDeviceObj.BluList;
             return View(newDeviceObj);
         }
-
     }
 }
