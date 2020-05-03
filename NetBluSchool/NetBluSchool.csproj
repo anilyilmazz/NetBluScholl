@@ -190,7 +190,37 @@
   <ItemGroup>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Static\Resim.png" />
+    <Content Include="Static\css\site.css" />
+    <Content Include="Static\css\site.min.css" />
+    <Content Include="Static\favicon.ico" />
+    <Content Include="Static\images\banner1.svg" />
+    <Content Include="Static\images\banner2.svg" />
+    <Content Include="Static\images\banner3.svg" />
+    <Content Include="Static\images\bluetoothicon.png" />
+    <Content Include="Static\images\Resim.png" />
+    <Content Include="Static\images\resim2.jpg" />
+    <Content Include="Static\images\resim3.jpg" />
+    <Content Include="Static\images\teacher.png" />
+    <Content Include="Static\js\site.js" />
+    <Content Include="Static\js\site.min.js" />
+    <Content Include="Static\lib\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="Static\lib\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="Static\lib\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Static\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Static\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Static\lib\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="Static\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Static\lib\bootstrap\dist\js\npm.js" />
+    <Content Include="Static\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <Content Include="Static\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Static\lib\jquery-validation-unobtrusive\LICENSE.txt" />
+    <Content Include="Static\lib\jquery-validation\dist\additional-methods.js" />
+    <Content Include="Static\lib\jquery-validation\dist\additional-methods.min.js" />
+    <Content Include="Static\lib\jquery-validation\dist\jquery.validate.js" />
+    <Content Include="Static\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <Content Include="Static\lib\jquery\dist\jquery.js" />
+    <Content Include="Static\lib\jquery\dist\jquery.min.js" />
+    <Content Include="Static\lib\jquery\LICENSE.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -234,6 +264,23 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Views\Teacher\SearchStudent.cshtml" />
+    <Content Include="Static\css\Roboto-Thin.ttf" />
+    <Content Include="Static\fontawesome-free-5.13.0-web.zip" />
+    <Content Include="Static\lib\bootstrap\.bower.json" />
+    <Content Include="Static\lib\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="Static\lib\bootstrap\dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="Static\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="Static\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="Static\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Static\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Static\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Static\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Static\lib\bootstrap\LICENSE" />
+    <Content Include="Static\lib\jquery-validation-unobtrusive\.bower.json" />
+    <Content Include="Static\lib\jquery-validation\.bower.json" />
+    <Content Include="Static\lib\jquery-validation\LICENSE.md" />
+    <Content Include="Static\lib\jquery\.bower.json" />
+    <Content Include="Static\lib\jquery\dist\jquery.min.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
