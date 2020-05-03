@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "CreateLesson";
+    Layout = "~/Views/Shared/SideBar.cshtml";
+}
+
+
+<div class="alert alert-warning" role="alert">
+    Ders eklemek için alanları doldurunuz.
+</div>
+<form action="/Teacher/CreateLesson" method="POST">
+    <div class="form-row">
+        <div class="col">
+            <label>Dersin Adı:</label><input type="text" class="form-control" placeholder="Dersin Adını Giriniz..." name="lessonName_frm_input">
+        </div>
+        <div class="col">
+            <label>Derslik:</label> <input type="text" class="form-control" placeholder="Derslik..." name="ClassRoom">
+        </div>
+    </div>
+    <hr>
+    <div class="form-row">
+        <div class="col">
+            <label for="bolum">Bölümününüzü seçiniz:</label>
+            <select type="text" class="form-control" name="Department">
+                <option value="Bilgisayar Muh">Bilgisayar Mühendisliği</option>
+                <option value="Gida Muh">Gıda Mühendisliği</option>
+                <option value="Elektrik Muh">Elektrik Mühendisliği</option>
+                <option value="Genetik Muh">Genetik ve Biyomühendislik</option>
+                <option value="Makine Muh">Makine Mühendisliği</option>
+            </select>
+        </div>
+        <div class="col">
+            <label for="duzey">Ders Düzeyini seçiniz:</label>
+            <select type="text" class="form-control" name="Degree">
+                <option value="Lisans">Lisans</option>
+                <option value="On Lisans">Ön Lisans</option>
+                <option value="Yuksek Lisans">Yüksek Lisans</option>
+                <option value="Doktora">Doktora</option>
+            </select>
+        </div>
+    </div>
+    <hr>
+    <div class="form-row">
+        <div class="col">
+            <label>Kredisi(AKTS):</label><input type="text" class="form-control" placeholder="Dersin Kredisini Giriniz..." name="Credit">
+        </div>
+        <div class="col">
+            <label>Dersi Alan Öğrenci Sayısı:</label> <input type="text" class="form-control" placeholder="Öğrenci sayısını giriniz..." name="StudentCount">
+        </div>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-warning" style="width: 100%;">Dersi Ekle</button>
+</form>
